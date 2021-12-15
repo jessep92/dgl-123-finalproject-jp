@@ -26,7 +26,7 @@
               <div class="form__itemsContainer">
                 <div class="form__imageContainer">
                   <img
-                    src="images/simpsons.jpg"
+                    src="images/simpsons.jpeg"
                     alt="Simpsons"
                     class="form__image"
                   />
