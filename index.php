@@ -82,7 +82,22 @@
 
           <div class="characters__container layout-container">
             <div class="characters__row layout-row">
-              <ul class="characters__items"></ul>
+              <ul class="characters__items">
+                  
+                    <?php
+                        // Get json file contents
+                        $simpsonContent = file_get_contents('characters.json');
+                        // var_dump($simpsonContent);
+
+                        // Iterate through li with simpsonContent
+                        if (isset($_GET) || is_array($_GET)) {
+                            foreach ($_GET as $simpsonContent) { ?>
+                                <li><h3><?=$simpsonContent?></h3><img src="images/<?=$simpsonContent?>.png"/></li>
+                                <?
+                            }
+                        }
+                    ?>
+              </ul>
             </div>
           </div>
         </div>
