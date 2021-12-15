@@ -87,12 +87,15 @@
                     <?php
                         // Get json file contents
                         $simpsonContent = file_get_contents('characters.json');
-                        // var_dump($simpsonContent);
+                        // var_dump($simpsonContent); TEST CONTENT
+
+                        // Convert to array
+                        $array = json_decode($simpsonContent, true);
 
                         // Iterate through li with simpsonContent
                         if (isset($_GET) || is_array($_GET)) {
-                            foreach ($_GET as $simpsonContent) { ?>
-                                <li><h3><?=$simpsonContent?></h3><img src="images/<?=$simpsonContent?>.png"/></li>
+                            foreach ($_GET as $array) { ?>
+                                <li><h3><?=$array?></h3><img src="images/<?=$array?>.png"/></li>
                                 <?
                             }
                         }
